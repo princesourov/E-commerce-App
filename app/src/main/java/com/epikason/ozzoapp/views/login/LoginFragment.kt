@@ -1,5 +1,6 @@
 package com.epikason.ozzoapp.views.login
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavOptions
@@ -10,6 +11,7 @@ import com.epikason.ozzoapp.core.DataState
 import com.epikason.ozzoapp.data.models.UserLogIn
 import com.epikason.ozzoapp.databinding.FragmentLoginBinding
 import com.epikason.ozzoapp.isEmpty
+import com.epikason.ozzoapp.views.dashboard.seller.SellerDashboard
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -59,13 +61,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
 
                 is DataState.Success -> {
                     loadingDialog?.dismiss()
-                    findNavController().navigate(
-                        R.id.action_loginFragment_to_dashboardFragment,
-                        null,
-                        NavOptions.Builder()
-                            .setPopUpTo(R.id.main_nav, true)
-                            .build()
-                    )
+                    val intent = Intent(requireContext(), SellerDashboard::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
                 }
             }
         }

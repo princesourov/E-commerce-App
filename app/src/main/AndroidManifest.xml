@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OZZOApp">
         <activity
+            android:name=".views.dashboard.seller.SellerDashboard"
+            android:exported="false" />
+        <activity
             android:name=".views.starter.MainActivity"
             android:exported="true">
             <intent-filter>

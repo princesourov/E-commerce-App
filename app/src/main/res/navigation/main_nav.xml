@@ -23,9 +23,6 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_registerFragment2"
             app:destination="@id/registerFragment" />
     </fragment>
@@ -35,23 +32,8 @@
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_registerFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
-        <action
-            android:id="@+id/action_registerFragment_to_dashboardFragment2"
-            app:destination="@id/dashboardFragment" />
-        <action
             android:id="@+id/action_registerFragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/dashboardFragment"
-        android:name="com.epikason.ozzoapp.views.dashboard.DashboardFragment"
-        android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" >
-        <action
-            android:id="@+id/action_dashboardFragment_to_startFragment"
-            app:destination="@id/startFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
@@ -64,8 +46,5 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_startFragment2"
             app:destination="@id/startFragment" />
-        <action
-            android:id="@+id/action_splashScreenFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
     </fragment>
 </navigation>
