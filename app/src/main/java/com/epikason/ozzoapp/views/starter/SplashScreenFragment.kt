@@ -16,14 +16,14 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class SplashScreenFragment :
     BaseFragment<FragmentSplashScreenBinding>(FragmentSplashScreenBinding::inflate) {
-        @Inject
-        lateinit var qAuth: FirebaseAuth
+    @Inject
+    lateinit var qAuth: FirebaseAuth
 
 
     override fun setListener() {
 
 
-        object : CountDownTimer(1500, 1000) {
+        object : CountDownTimer(1000, 1000) {
             override fun onFinish() {
                 val currentUser = qAuth.currentUser
                 if (currentUser != null) {
@@ -31,7 +31,8 @@ class SplashScreenFragment :
                     startActivity(intent)
                     requireActivity().finish()
                 } else {
-                    findNavController().navigate(R.id.action_splashScreenFragment_to_startFragment2,null,
+                    findNavController().navigate(
+                        R.id.action_splashScreenFragment_to_startFragment2, null,
                         NavOptions.Builder()
                             .setPopUpTo(R.id.splashScreenFragment, true)
                             .build()
@@ -41,6 +42,7 @@ class SplashScreenFragment :
 
             override fun onTick(millisUntilFinished: Long) {}
         }.start()
+
 
     }
 

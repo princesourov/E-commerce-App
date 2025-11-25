@@ -7,5 +7,6 @@
     </style>
 
     <style name="Theme.OZZOApp" parent="Base.Theme.OZZOApp" />
+    <style name="Theme.MAIQ.App.Ber" parent="Theme.Material3.DayNight"/>
 
 </resources>

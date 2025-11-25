@@ -14,6 +14,7 @@
         android:theme="@style/Theme.OZZOApp">
         <activity
             android:name=".views.dashboard.seller.SellerDashboard"
+            android:theme="@style/Theme.MAIQ.App.Ber"
             android:exported="false" />
         <activity
             android:name=".views.starter.MainActivity"

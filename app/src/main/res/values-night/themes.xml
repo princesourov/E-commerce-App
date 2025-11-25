@@ -5,4 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="android:windowIsTranslucent">true</item>
     </style>
+    <style name="Theme.MAIQ.App.Ber" parent="Theme.Material3.DayNight"/>
 </resources>
