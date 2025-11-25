@@ -31,7 +31,6 @@ class SellerDashboard : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivitySellerDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

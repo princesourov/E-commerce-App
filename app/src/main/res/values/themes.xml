@@ -7,6 +7,10 @@
     </style>
 
     <style name="Theme.OZZOApp" parent="Base.Theme.OZZOApp" />
-    <style name="Theme.MAIQ.App.Ber" parent="Theme.Material3.DayNight"/>
+    <style name="Theme.MAIQ.App.Ber" parent="Theme.Material3.DayNight">
+        <item name="android:statusBarColor">@color/primary_color</item>
+        <item name="background">@color/primary_color</item>
+    </style>
+
 
 </resources>

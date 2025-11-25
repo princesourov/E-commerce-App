@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     tools:context=".views.dashboard.seller.SellerDashboard">
 
@@ -22,8 +21,8 @@
         android:id="@+id/navContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_2sdp"
         android:background="@android:color/transparent"
+        android:padding="@dimen/_2sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

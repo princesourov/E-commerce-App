@@ -1,4 +1,4 @@
-package com.epikason.ozzoapp
+package com.epikason.ozzoapp.core
 
 import android.widget.EditText
 

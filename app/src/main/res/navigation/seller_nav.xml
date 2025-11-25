@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/myProductFragment"
         android:name="com.epikason.ozzoapp.views.dashboard.seller.product.MyProductFragment"
-        android:label="My ptoduct"
+        android:label="My product"
         tools:layout="@layout/fragment_my_ptoduct" />
     <fragment
         android:id="@+id/uploadProductFragment"

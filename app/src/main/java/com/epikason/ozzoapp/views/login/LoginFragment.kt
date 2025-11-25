@@ -8,9 +8,10 @@ import androidx.navigation.fragment.findNavController
 import com.epikason.ozzoapp.R
 import com.epikason.ozzoapp.base.BaseFragment
 import com.epikason.ozzoapp.core.DataState
+import com.epikason.ozzoapp.core.extract
 import com.epikason.ozzoapp.data.models.UserLogIn
 import com.epikason.ozzoapp.databinding.FragmentLoginBinding
-import com.epikason.ozzoapp.isEmpty
+import com.epikason.ozzoapp.core.isEmpty
 import com.epikason.ozzoapp.views.dashboard.seller.SellerDashboard
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +25,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                 etEmail.isEmpty()
                 etPassword.isEmpty()
                 if (!etEmail.isEmpty() && !etPassword.isEmpty()) {
-                    var user = UserLogIn(etEmail.text.toString(), etPassword.text.toString())
+                    var user = UserLogIn(etEmail.extract(), etPassword.extract())
 
                     viewModel.userLogin(user)
                     loadingDialog?.show()

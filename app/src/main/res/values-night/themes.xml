@@ -5,5 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="android:windowIsTranslucent">true</item>
     </style>
-    <style name="Theme.MAIQ.App.Ber" parent="Theme.Material3.DayNight"/>
+    <style name="Theme.MAIQ.App.Ber" parent="Theme.Material3.DayNight">
+        <item name="android:statusBarColor">#D70F64</item>
+    </style>
 </resources>

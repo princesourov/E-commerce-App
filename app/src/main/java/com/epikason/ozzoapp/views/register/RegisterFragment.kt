@@ -7,9 +7,10 @@ import androidx.navigation.fragment.findNavController
 import com.epikason.ozzoapp.R
 import com.epikason.ozzoapp.base.BaseFragment
 import com.epikason.ozzoapp.core.DataState
+import com.epikason.ozzoapp.core.extract
 import com.epikason.ozzoapp.data.models.UserRegistration
 import com.epikason.ozzoapp.databinding.FragmentRegisterBinding
-import com.epikason.ozzoapp.isEmpty
+import com.epikason.ozzoapp.core.isEmpty
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,9 +26,9 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                 etPassword.isEmpty()
                 if (!etName.isEmpty() && !etEmail.isEmpty() && !etPassword.isEmpty()) {
                     val user = UserRegistration(
-                        etName.text.toString().trim(),
-                        etEmail.text.toString().trim(),
-                        etPassword.text.toString().trim(),
+                        etName.extract(),
+                        etEmail.extract(),
+                        etPassword.extract(),
                         "Seller",
                         ""
                     )
